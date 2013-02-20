@@ -56,13 +56,13 @@ p {
   line-height: 30px;
   margin-bottom: 35px;
 }
-a {
+a, a:visited, a:active {
   color: #D25437;
   transition: color .25s ease-in-out;
   -moz-transition: color .25s ease-in-out;
   -webkit-transition: color .25s ease-in-out;
 }
-a:hover, a:visited {
+a:hover {
   color: #333332;
   transition: color .25s ease-in-out;
   -moz-transition: color .25s ease-in-out;
@@ -125,7 +125,7 @@ article.post blockquote {
   -o-transition: background-color .25s ease;
   transition: background-color .25s ease;
   vertical-align: bottom;
-  color: #FFFFFF;
+  color: #FFFFFF !important;
   background-color: #00ACED;
   position: relative;
   left: 50%;
@@ -159,6 +159,14 @@ article.post blockquote {
   content: "";
   display: table;
   clear: both;
+}
+.resize {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  height: 80px;
+  width: 80px;
+  background: url('../images/resize.png');
 }
 
 /*- HEADER ----------------------------------- */
@@ -267,6 +275,18 @@ section.article article.post header.post-header hgroup p.lead {
   font-style: italic;
   line-height: 36px;
   margin-bottom: 0;
+}
+section.article article.post figure {
+  margin: 35px 0;
+}
+section.article article.post figure figcaption {
+  font-size: 12px;
+  font-style: italic;
+}
+section.article article.post figure img {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
 }
 section.article article.post p.meta {
   color: #999999;

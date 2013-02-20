@@ -248,11 +248,46 @@ section.article article.post header.post-header hgroup p.lead {
   line-height: 36px;
   margin-bottom: 0;
 }
+section.article article.post p.meta {
+  color: #999999;
+  font-style: italic;
+  font-size: 16px;
+}
 
 /*- FOOTER ----------------------------------- */
 footer {
   background-color: #333332;
-  height: 320px;
+  padding: 30px 0;
+  color: #FFFFFF;
+}
+footer p.category {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  color: #999999;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255,255,255,.3);
+  margin-bottom: 35px;
+}
+footer ol.previous-posts li {
+  line-height: 30px;
+  margin-bottom: 15px;
+}
+footer ol.previous-posts li:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+footer ol.previous-posts li h2 {
+  float: left;
+  max-width: 460px;
+}
+footer ol.previous-posts li span {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+  color: #999999;
+  float: right;
+  text-align: right;
 }
 
 

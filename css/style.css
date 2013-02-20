@@ -209,6 +209,23 @@ section.article {
   position: relative;
   margin-bottom: 50px;
 }
+section.article img.loading {
+  display: block;
+  margin: 0 auto;
+  position: absolute;
+  top: 250px;
+  left: 50%;
+  margin-left: -12px;
+  z-index: 10;
+}
+section.article div.overlay {
+  background-color: #333332;
+  width: 100%;
+  height: 530px;
+  border-bottom: 1px solid #DDDDDD;
+  position: absolute;
+  top: 0;
+}
 section.article div.featured-image {
   vertical-align: middle;
   height: 530px;

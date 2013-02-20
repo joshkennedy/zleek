@@ -282,13 +282,48 @@ footer ol.previous-posts li h2 {
   float: left;
   max-width: 460px;
 }
-footer ol.previous-posts li span {
+footer ol.previous-posts li span.date {
   font-family: 'Open Sans', sans-serif;
   font-size: 12px;
   color: #999999;
   float: right;
   text-align: right;
 }
+
+/*- MEDIA QUERIES ----------------------------------- */
+@media only screen and (max-width : 960px) {
+  
+  .wrap {
+    width: 100%;
+  }
+  .wrap.post {
+    padding: 0 10%;
+  }
+  header.site-header {
+    padding: 20px 10%;
+  }
+  footer ol.previous-posts li h2, footer ol.previous-posts li span.date {
+    float: none;
+  }
+}
+
+@media only screen and (max-width : 680px) {
+  article.post header.post-header hgroup h1 {
+    font-size: 28px !important;
+  }
+  article.post header.post-header hgroup p.category {
+    font-size: 12px !important;
+  }
+  article.post p, article.post ul, article.post ol {
+    font-size: 16px !important;
+  }
+  article.post p.lead, article.post blockquote {
+    font-size: 20px !important;
+  }
+}
+
+
+
 
 
 

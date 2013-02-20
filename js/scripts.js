@@ -3,7 +3,7 @@ $(document).ready(function() {
     $('.site-header nav').slideToggle(100);
   });
   
-  $('')
+  $('article.post iframe').wrap('<div class="video-container" />');
 
 });
 

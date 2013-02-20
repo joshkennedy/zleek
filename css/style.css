@@ -108,7 +108,7 @@ article.post blockquote {
   font-family: "freight-sans-pro","Myriad Pro","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
   font-weight: 400;
   font-size: 15px;
-  line-height: 50px;
+  line-height: 45px;
   text-align: center;
   cursor: pointer;
   -webkit-border-radius: 3px;
@@ -322,6 +322,12 @@ footer ol.previous-posts li h2 {
   float: left;
   max-width: 460px;
 }
+footer ol.previous-posts li h2 a {
+  color: #FFFFFF;
+}
+footer ol.previous-posts li h2 a:hover {
+  color: #D25437;
+}
 footer ol.previous-posts li span.date {
   font-family: 'Open Sans', sans-serif;
   font-size: 12px;
@@ -377,9 +383,17 @@ footer ol.previous-posts li span.date {
   article.post p, article.post ul, article.post ol {
     font-size: 16px !important;
     line-height: 24px !important;
+    margin-bottom: 27px;
+  }
+  article.post ul, article.post ol {
+    margin-left: 30px;
   }
   article.post p.lead, article.post blockquote {
     font-size: 20px !important;
+  }
+  article.post blockquote {
+    padding-left: 20px;
+    line-height: 28px;
   }
   header.site-header {
     min-height: 59px;

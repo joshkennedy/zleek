@@ -256,6 +256,7 @@ section.article article.post header.post-header hgroup {
   color: #FFFFFF;
   position: absolute;
   bottom: 35px;
+  width: 100%;
 }
 section.article article.post header.post-header hgroup p.category {
   font-family: 'Open Sans', sans-serif;

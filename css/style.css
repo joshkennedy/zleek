@@ -404,6 +404,9 @@ footer ol.previous-posts li span.date {
   article.post ul, article.post ol {
     margin-left: 30px;
   }
+  article.post li {
+    line-height: 24px !important;
+  }
   article.post p.lead, article.post blockquote {
     font-size: 20px !important;
   }

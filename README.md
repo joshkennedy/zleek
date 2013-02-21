@@ -48,6 +48,6 @@ Since Anchor (for the moment) lacks any way to re-order menu items, some jugglin
 4. **Boom!** [You're done](http://bukk.it/mckayla.gif).
 
   
-I am still working on making Zleek zleeker. If you have any tips or questions, please post them in the issues section. 
+I am still working on making Zleek zleeker. I'd like to add/integrate comments and search in the future. When I find time. If you have any tips or questions, please post them in the issues section or submit a pull request. Or fork that trash and make your own template. 
 
 Cheers. 

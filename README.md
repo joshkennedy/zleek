@@ -1,7 +1,8 @@
 Zleek
 =====
 
-Zleek - a clean, responsive theme for Anchor CMS.
+Zleek - a clean, responsive theme for Anchor CMS. 
+See it in action [here](http://joshkennedy.github.com/zleek)
 
 #### Why Zleek is zo zexy:
 - Shows your most recent post as your home page

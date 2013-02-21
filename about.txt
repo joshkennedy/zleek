@@ -1,0 +1,5 @@
+Theme name:    Zleek
+Description:   A clean, responsive theme for Anchor CMS.
+Author name:   Josh Kennedy
+Author site:   http://joshkennedy.me
+License:       http://licence.visualidiot.com

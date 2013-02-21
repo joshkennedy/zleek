@@ -56,13 +56,13 @@ p {
   line-height: 30px;
   margin-bottom: 35px;
 }
-a {
+a, a:visited, a:active {
   color: #D25437;
   transition: color .25s ease-in-out;
   -moz-transition: color .25s ease-in-out;
   -webkit-transition: color .25s ease-in-out;
 }
-a:hover, a:visited {
+a:hover {
   color: #333332;
   transition: color .25s ease-in-out;
   -moz-transition: color .25s ease-in-out;
@@ -108,7 +108,7 @@ article.post blockquote {
   font-family: "freight-sans-pro","Myriad Pro","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
   font-weight: 400;
   font-size: 15px;
-  line-height: 50px;
+  line-height: 45px;
   text-align: center;
   cursor: pointer;
   -webkit-border-radius: 3px;
@@ -125,7 +125,7 @@ article.post blockquote {
   -o-transition: background-color .25s ease;
   transition: background-color .25s ease;
   vertical-align: bottom;
-  color: #FFFFFF;
+  color: #FFFFFF !important;
   background-color: #00ACED;
   position: relative;
   left: 50%;
@@ -141,7 +141,7 @@ article.post blockquote {
   float: left;
   height: 19px;
   width: 23px;
-  background: url('../images/twitter-bird.png') no-repeat center center;
+  background: url('../img/twitter-bird.png') no-repeat center center;
   position: relative;
   top: 50%;
   margin: -9px 10px 0 0;
@@ -160,11 +160,37 @@ article.post blockquote {
   display: table;
   clear: both;
 }
+.resize {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  height: 80px;
+  width: 80px;
+  background: url('../img/resize.png');
+}
+.archive {
+  margin-top: 50px;
+}
+.archive li {
+  margin-bottom: 15px;
+  line-height: 100%;
+}
+.archive ol li h2 { }
+.archive ol li em, .archive ol li em span.date, .archive ol li em span.date time {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+  color: #999999;
+  line-height: 12px;
+  vertical-align: top;
+}
 
 /*- HEADER ----------------------------------- */
 header.site-header {
   padding: 20px 0;
   border-bottom: 1px solid #EEEEEE;
+}
+header.site-header a.menu {
+  display: none;
 }
 header.site-header hgroup h1, header.site-header nav ul {
   font-family: 'Open Sans', sans-serif;
@@ -206,6 +232,23 @@ section.article {
   position: relative;
   margin-bottom: 50px;
 }
+section.article img.loading {
+  display: block;
+  margin: 0 auto;
+  position: absolute;
+  top: 250px;
+  left: 50%;
+  margin-left: -12px;
+  z-index: 10;
+}
+section.article div.overlay {
+  background-color: #333332;
+  width: 100%;
+  height: 530px;
+  border-bottom: 1px solid #DDDDDD;
+  position: absolute;
+  top: 0;
+}
 section.article div.featured-image {
   vertical-align: middle;
   height: 530px;
@@ -228,6 +271,7 @@ section.article article.post header.post-header hgroup {
   color: #FFFFFF;
   position: absolute;
   bottom: 35px;
+  width: 100%;
 }
 section.article article.post header.post-header hgroup p.category {
   font-family: 'Open Sans', sans-serif;
@@ -248,10 +292,38 @@ section.article article.post header.post-header hgroup p.lead {
   line-height: 36px;
   margin-bottom: 0;
 }
+section.article article.post figure {
+  margin: 35px 0;
+}
+section.article article.post figure figcaption {
+  font-size: 12px;
+  font-style: italic;
+}
+section.article article.post figure img {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+}
 section.article article.post p.meta {
   color: #999999;
   font-style: italic;
   font-size: 16px;
+}
+section.article article.post .video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px; height: 0; overflow: hidden;
+  margin-bottom: 35px;
+}
+
+section.article article.post .video-container iframe,
+section.article article.post .video-container object,
+section.article article.post .video-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 /*- FOOTER ----------------------------------- */
@@ -282,6 +354,12 @@ footer ol.previous-posts li h2 {
   float: left;
   max-width: 460px;
 }
+footer ol.previous-posts li h2 a {
+  color: #FFFFFF;
+}
+footer ol.previous-posts li h2 a:hover {
+  color: #D25437;
+}
 footer ol.previous-posts li span.date {
   font-family: 'Open Sans', sans-serif;
   font-size: 12px;
@@ -292,15 +370,14 @@ footer ol.previous-posts li span.date {
 
 /*- MEDIA QUERIES ----------------------------------- */
 @media only screen and (max-width : 960px) {
-  
   .wrap {
     width: 100%;
   }
   .wrap.post {
-    padding: 0 10%;
+    padding: 0 7%;
   }
   header.site-header {
-    padding: 20px 10%;
+    padding: 20px 7%;
   }
   footer ol.previous-posts li h2, footer ol.previous-posts li span.date {
     float: none;
@@ -308,6 +385,27 @@ footer ol.previous-posts li span.date {
 }
 
 @media only screen and (max-width : 680px) {
+  section.article img.loading {
+    top: 10px !important;
+    left: inherit;
+    right: 6%;
+  }
+  section.article div.overlay {
+    background-color: #333332;
+    width: 100%;
+    height: 250px;
+    border-bottom: 1px solid #DDDDDD;
+    position: absolute;
+    top: 0;
+  }
+  section.article div.featured-image, section.article article.post header.post-header {
+    min-height: 250px;
+    height: auto;
+  }
+  section.article article.post header.post-header hgroup {
+    position: static;
+    padding: 20px 0;
+  }
   article.post header.post-header hgroup h1 {
     font-size: 28px !important;
   }
@@ -316,9 +414,70 @@ footer ol.previous-posts li span.date {
   }
   article.post p, article.post ul, article.post ol {
     font-size: 16px !important;
+    line-height: 24px !important;
+    margin-bottom: 27px;
+  }
+  article.post ul, article.post ol {
+    margin-left: 30px;
+  }
+  article.post li {
+    line-height: 24px !important;
   }
   article.post p.lead, article.post blockquote {
     font-size: 20px !important;
+  }
+  article.post blockquote {
+    padding-left: 20px;
+    line-height: 28px;
+  }
+  header.site-header {
+    min-height: 59px;
+  }
+  header.site-header hgroup {
+    float: none;
+    position: absolute;
+    left: 7%;
+  }
+  header.site-header a.menu {
+    display: block;
+    height: 16px;
+    width: 16px;
+    position: absolute;
+    right: 7%;
+    float: right;
+  }
+  header.site-header a.menu img {
+    height: 16px;
+    width: 16px;
+  }
+  header.site-header nav {
+    display: none;
+    float: none;
+    width: 100%;
+  }
+  header.site-header nav:before {
+    content: '';
+    display: table;
+    clear: both;
+  }
+  header.site-header nav ul {
+    padding: 45px 0 10px 0;
+  }
+  header.site-header nav ul li {
+    display: block;
+    font-size: 24px;
+    margin-left: 0;
+    border-top: 1px solid #DDDDDD;
+  }
+  header.site-header nav ul li a {
+    color: #333332;
+    display: block;
+    width: 100%;
+    padding: 15px 0;
+  }
+  header.site-header nav ul li a:active {
+    background-color: #D25437;
+    color: #FFFFFF;
   }
 }
 

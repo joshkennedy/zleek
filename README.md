@@ -31,14 +31,14 @@ This theme comes with one large featured image per post. Should you fail to uplo
 	- Type: file
 	- Unique Key: featured-image
 	- Label: Featured Image
-	- File TImes: [blank]
+	- File Types: [blank]
 3. Upload featured images when editing a post
 4. **Boom!** [You're done](http://bukk.it/algebraic.gif).
 
 ### Navigation
 Since Anchor (for the moment) lacks any way to re-order menu items, some juggling is necessary to shift things around a bit. I prefer simple solutions, and just wanted the *Home* link to always be the left-most link in the nav.
 
-1. Create a new Custom Fiel in the **Extend > Custom Fields** menu in Anchor's admin
+1. Create a new Custom Field in the **Extend > Custom Fields** menu in Anchor's admin
 	- Extend: page
 	- Type: text
 	- Unique Key: show-in-menu

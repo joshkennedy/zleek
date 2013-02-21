@@ -44,7 +44,6 @@ Since Anchor (for the moment) lacks any way to re-order menu items, some jugglin
 	- Unique Key: show-in-menu
 	- Label: Show link in nav menu?
 2. Click **Update**
-
 3. If you want to hide any subsequent pages from the nav, simply enter `false` into the aforementioned field and…
 4. **Boom!** [You're done](http://bukk.it/mckayla.gif).
 

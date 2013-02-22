@@ -198,6 +198,7 @@ header.site-header hgroup h1 a:hover {
 }
 header.site-header nav {
   float: right;
+  display: block;
 }
 header.site-header nav ul li {
   font-size: 14px;

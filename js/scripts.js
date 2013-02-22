@@ -4,13 +4,14 @@ $(document).ready(function() {
     return false;
   });
 
-  $(window).resize(function() {
-    var $menu = $('.site-header nav');
-    if ($(window).width() > 780) {
-      // Window is larger than 767 pixels wide
-      $($menu).css('display', 'block');
+  $(window).resize(function(){
+    var w = $(window).width();
+    var menu = $('.site-header nav');
+    if(w > 680 && menu.is(':hidden')) {
+      menu.removeAttr('style');
     }
-  });
+  }); 
+
 
   $('article.post iframe').wrap('<div class="video-container" />');
 

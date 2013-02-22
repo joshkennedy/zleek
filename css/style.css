@@ -141,7 +141,7 @@ article.post blockquote {
   float: left;
   height: 19px;
   width: 23px;
-  background: url('../img/twitter-bird.png') no-repeat center center;
+  background: url('../images/twitter-bird.png') no-repeat center center;
   position: relative;
   top: 50%;
   margin: -9px 10px 0 0;
@@ -166,22 +166,7 @@ article.post blockquote {
   right: 0;
   height: 80px;
   width: 80px;
-  background: url('../img/resize.png');
-}
-.archive {
-  margin-top: 50px;
-}
-.archive li {
-  margin-bottom: 15px;
-  line-height: 100%;
-}
-.archive ol li h2 { }
-.archive ol li em, .archive ol li em span.date, .archive ol li em span.date time {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 12px;
-  color: #999999;
-  line-height: 12px;
-  vertical-align: top;
+  background: url('../images/resize.png');
 }
 
 /*- HEADER ----------------------------------- */
@@ -213,6 +198,7 @@ header.site-header hgroup h1 a:hover {
 }
 header.site-header nav {
   float: right;
+  display: block;
 }
 header.site-header nav ul li {
   font-size: 14px;

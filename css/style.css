@@ -353,6 +353,9 @@ footer ol.previous-posts li span.date {
   float: right;
   text-align: right;
 }
+div.sub-footer p {
+  font-size: 11px;
+}
 
 /*- MEDIA QUERIES ----------------------------------- */
 @media only screen and (max-width : 960px) {

@@ -1,8 +1,8 @@
   <footer>
     <aside class="wrap post">
-      <p class="category">Previous Posts</p>
       <ol class="previous-posts">
         <?php if(has_posts()): ?>
+          <p class="category">Previous Posts</p>
           <!-- We have posts, it's safe to loop. -->
           <?php while(posts()): ?>
             <li>
@@ -10,6 +10,8 @@
               <span class="date">published <time datetime="<?php echo date(DATE_W3C, article_time()); ?>"><?php echo relative_time(article_time()); ?></time></span>
             </li>
           <?php endwhile; ?>
+        <?php else: ?>
+          <p>I'm the loneliest archive ever.</p>
         <?php endif; ?>
       </ol>
     </aside>

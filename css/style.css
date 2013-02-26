@@ -218,6 +218,17 @@ section.article {
   position: relative;
   margin-bottom: 50px;
 }
+section.archive {
+  margin-top: 50px;
+}
+section.archive ol.post-list li {
+  margin-bottom: 10px;
+}
+section.archive ol.post-list li span, section.archive ol.post-list li span time {
+  font-size: 12px;
+  vertical-align: top;
+  line-height: 100%;
+}
 section.article img.loading {
   display: block;
   margin: 0 auto;

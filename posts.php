@@ -4,7 +4,7 @@
       <article class="wrap post">
         <?php if(has_posts()): ?>
           <!-- We have posts, it's safe to loop. -->
-          <ol>
+          <ol class="post-list">
             <?php while(posts()): ?>
               <li>
                 <h2><a href="<?php echo article_url(); ?>"><?php echo article_title(); ?></a></h2>
@@ -12,6 +12,8 @@
               </li>
             <?php endwhile; ?>
           </ol>
+        <?php else: ?>
+          <p>Yeah, I haven't actually written anything yet.</p>
         <?php endif; ?>
       </article>
     </section>

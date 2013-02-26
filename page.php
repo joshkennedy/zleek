@@ -24,7 +24,11 @@
     </section>
 
   <?php else: ?>
-    <p>I haven't written anything yet. This saddens me.</p>
+    <section class="article archive">
+      <article class="wrap post">
+        <p>I haven't written anything yet. This saddens me.</p>
+      </article>
+    </section>
   <?php endif; ?>
 
 <?php else: ?>

@@ -141,7 +141,7 @@ article.post blockquote {
   float: left;
   height: 19px;
   width: 23px;
-  background: url('../images/twitter-bird.png') no-repeat center center;
+  background: url('../img/twitter-bird.png') no-repeat center center;
   position: relative;
   top: 50%;
   margin: -9px 10px 0 0;
@@ -166,7 +166,7 @@ article.post blockquote {
   right: 0;
   height: 80px;
   width: 80px;
-  background: url('../images/resize.png');
+  background: url('../img/resize.png');
 }
 
 /*- HEADER ----------------------------------- */

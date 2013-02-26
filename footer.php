@@ -14,6 +14,9 @@
       </ol>
     </aside>
   </footer>
+  <div class="sub-footer">
+    <p class="meta wrap post">&copy; <?php echo date('Y'); ?> <a href="<?php echo full_url(); ?>"><?php echo site_name(); ?></a></p>
+  </div>
 
   <!-- Grab some fresh-squeezed jquery -->
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>

@@ -1,23 +1,18 @@
   <footer>
     <aside class="wrap post">
       <ol class="previous-posts">
-        <?php if(has_posts()): ?>
-          <p class="category">Previous Posts</p>
-          <!-- We have posts, it's safe to loop. -->
-          <?php while(posts()): ?>
+        <p class="category">Previous Posts</p>
+          <?php while(footer_latest_posts()): ?>
             <li>
               <h2><a href="<?php echo article_url(); ?>"><?php echo article_title(); ?></a></h2>
               <span class="date">published <time datetime="<?php echo date(DATE_W3C, article_time()); ?>"><?php echo relative_time(article_time()); ?></time></span>
             </li>
           <?php endwhile; ?>
-        <?php else: ?>
-          <p>I'm the loneliest archive ever.</p>
-        <?php endif; ?>
       </ol>
     </aside>
   </footer>
   <div class="sub-footer">
-    <p class="meta wrap post">&copy; <?php echo date('Y'); ?> <a href="<?php echo full_url(); ?>"><?php echo site_name(); ?></a></p>
+    <p class="meta wrap post">&copy; <?php echo date('Y'); ?> <a href="<?php echo full_url(); ?>"><?php echo site_name(); ?></a>. Powered by <a href="http://anchorcms.com">AnchorCMS</a>. Design by <a href="http://joshkennedy.me/">Josh Kennedy</a>.</p>
   </div>
 
   <!-- Grab some fresh-squeezed jquery -->

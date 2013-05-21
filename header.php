@@ -50,7 +50,7 @@
             </li>
             <?php while(menu_items()): if(hide_show_menu_item(menu_id(), "show-in-menu", "true") === "true") { ?>
               <li>
-                <a href="<?php echo menu_url(); ?>" title="<?php echo menu_title(); ?>">
+                <a <?php echo (menu_active() ? 'class="active"' : ''); ?> href="<?php echo menu_url(); ?>" title="<?php echo menu_title(); ?>">
                   <?php echo menu_name(); ?>
                 </a>
               </li>

@@ -20,11 +20,16 @@ function pluralise($amount, $str, $alt = '') {
   return intval($amount) === 1 ? $str : $str . ($alt !== '' ? $alt : 's');
 }
 
-function relative_time($time) {
-  // make sure $date is a time stamp
-  if(!is_numeric($time)) $time = strtotime($time);
+function relative_time($date) {
+  if(is_numeric($date)) $date = '@' . $date;
 
-  $elapsed = time() - $time;
+  $user_timezone = new DateTimeZone(Config::app('timezone'));
+  $date = new DateTime($date, $user_timezone);
+
+  // get current date in user timezone
+  $now = new DateTime('now', $user_timezone);
+
+  $elapsed = $now->format('U') - $date->format('U');
 
   if($elapsed <= 1) {
     return 'Just now';
@@ -50,6 +55,14 @@ function relative_time($time) {
   }
 }
 
+function twitter_account() {
+  return site_meta('twitter', 'joshkennedy');
+}
+
+function twitter_url() {
+  return 'https://twitter.com/' . twitter_account();
+}
+
 function hide_show_menu_item($id, $key, $default = '')
 {
   if($extend = Extend::field('page', $key, $id)) {
@@ -58,13 +71,34 @@ function hide_show_menu_item($id, $key, $default = '')
   return $default;
 }
 
-/*
-  Twitter
-*/
-function twitter_account() {
-  return Config::get('meta.twitter');
+function zleek_latest_post($limit = 1) {
+    if( ! $posts = Registry::get('zleek_latest_post')) {
+        $posts = Post::where('status', '=', 'published')->sort('created', 'desc')->take($limit)->get();
+        Registry::set('zleek_latest_post', $posts = new Items($posts));
+    }
+    if($result = $posts->valid()) {
+        // register single post
+        Registry::set('article', $posts->current());
+        // move to next
+        $posts->next();
+    }
+    // back to the start
+    else $posts->rewind();
+    return $result;
 }
 
-function twitter_url() {
-  return 'http://twitter.com/' . twitter_account();
+function footer_latest_posts() {
+    if( ! $posts = Registry::get('footer_latest_posts')) {
+        $posts = Post::where('status', '=', 'published')->sort('created', 'desc')->get();
+        Registry::set('footer_latest_posts', $posts = new Items($posts));
+    }
+    if($result = $posts->valid()) {
+        // register single post
+        Registry::set('article', $posts->current());
+        // move to next
+        $posts->next();
+    }
+    // back to the start
+    else $posts->rewind();
+    return $result;
 }

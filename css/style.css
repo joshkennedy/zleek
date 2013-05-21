@@ -40,6 +40,7 @@ h1, h2, h3, h4, h5 {
   font-family: 'Droid Serif', serif;
   font-weight: 700;
   letter-spacing: -1px;
+  margin-bottom: 5px;
 }
 h1 { 
   font-size: 36px;
@@ -209,7 +210,8 @@ header.site-header nav ul li {
 header.site-header nav ul li a {
   color: #999999;
 }
-header.site-header nav ul li a:hover {
+header.site-header nav ul li a:hover,
+header.site-header nav ul li a.active {
   color: #333332;
 }
 
@@ -220,6 +222,9 @@ section.article {
 }
 section.archive {
   margin-top: 50px;
+}
+section.archive ol.post-list {
+  margin-top: 25px;
 }
 section.archive ol.post-list li {
   margin-bottom: 10px;
@@ -478,6 +483,10 @@ div.sub-footer p {
   header.site-header nav ul li a:active {
     background-color: #D25437;
     color: #FFFFFF;
+  }
+  .sub-footer p {
+    line-height: 145%;
+    margin-top: 10px;
   }
 }
 

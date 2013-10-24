@@ -12,7 +12,7 @@
         <p class="lead">Unfortunately, the page <code>/<?php echo current_url(); ?></code> could not be found.</p>
       </hgroup>
     </header>
-    <p>Your best bet is either to try the <a href="<?php echo base_url(); ?>">home page</a> or go and cry in a corner (although I don't recommend the latter).</p>
+    <p>Your best bet is either to try the <a href="<?php echo base_url(); ?>">home page</a> or go cry in a corner (although I don't recommend the latter).</p>
   </article>
 </section>
 

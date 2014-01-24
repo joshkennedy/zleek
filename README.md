@@ -45,3 +45,6 @@ The response to Zleek has been amazing - I hope you all are enjoying it! I'm sti
 Cheers.
 
 [Come at me, bro](http://twitter.com/joshkennedy)
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/joshkennedy/zleek/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
